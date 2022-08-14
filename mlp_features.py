@@ -157,7 +157,7 @@ def all_properties(mol):
 def molecule_descriptors(mol, fp=False):
     one = []
     if fp:
-        fingerprint = get_1024_morgan_bit(mol, 2, nBits = 1024)
+        fingerprint = get_1024_morgan_bit(mol, 2, nBits = fp)
         array = np.zeros((0,), dtype=np.int8)
         DataStructs.ConvertToNumpyArray(fingerprint, array)
         one = array.tolist()
